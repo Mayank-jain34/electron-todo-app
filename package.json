@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "npm test",
-    "start": "electron main.js",
+    "start": "electron --inspect=5858 main.js",
     "watch": "watchify app/index.js -t babelify -o public/js/bundle.js --debug --verbose"
   },
   "author": "Mayank Jain",

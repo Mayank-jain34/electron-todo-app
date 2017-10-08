@@ -1,11 +1,10 @@
 let nextTodoId = 0
 
-export const addTodo = (taskName, dateOfCompletion) => {
+export const addTodo = (taskName) => {
   return {
     type : 'ADD_TODO',
     id : nextTodoId++,
-    taskName,
-    dateOfCompletion
+    taskName
   }
 }
 
@@ -30,12 +29,11 @@ export const deleteTodo = (id)=> {
   }
 }
 
-export const updateTodo = (id, taskName, dateOfCompletion)=> {
+export const updateTodo = (id, taskName)=> {
   return {
     type : 'UPDATE_TODO',
     id,
-    taskName,
-    dateOfCompletion
+    taskName
   }
 }
 

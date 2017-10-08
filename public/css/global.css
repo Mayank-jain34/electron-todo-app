@@ -3,8 +3,102 @@
 }
 
 
-body{
+body {
+  padding: 20px;
+  margin: 0px;
+  font-family: cursive;
+}
+h2 {
   margin: 0;
-  font-family: 'Exo 2', sans-serif;
 }
 
+.app-container {
+  text-align: center;
+}
+
+.main-header {
+  
+}
+
+.todo-form-container {
+  
+}
+.todo-form-container input {
+  width: 80%;
+  height: 40px;
+  font-size: 1rem;
+  outline: none;
+  padding: 5px;
+  font-family: cursive;
+}
+.todo-filter-container {
+  padding: 5px;
+}
+.todo-filter-container button {
+    border: 1px solid limegreen;
+    color: limegreen;
+    background: white;
+    padding: 4px 20px;
+    border-radius: 20px;
+    font-family: cursive;
+}
+.todo-filter-container button.active {
+  color: white;
+   background: limegreen;
+}
+
+.todo-list-container {
+  text-align: left;
+  padding: 5px 30px;
+}
+
+.todo-list-container > table {
+  border-collapse: collapse;
+}
+
+.todo-list-container > table  td {
+  border-bottom: 1px solid limegreen; 
+}
+.todo-list-container > table td:nth-child(2) {
+  padding: 7px;
+  width: 95%;
+}
+.todo-list-container > table label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid limegreen;
+}
+
+.todo-list-container > table label.done:after {
+  content: '';
+  display: inline-block;
+  height: 18px;
+  width: 10px;
+  border: 5px solid limegreen;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg) translate(1px, -7px);
+}
+
+.todo-list-container > table input[type="checkbox"] {
+  display: none;
+}
+
+.todo-list-container > table button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight:bold;
+  color: red;
+}
+
+.todo-list-container > table input[type="text"] {
+  padding: 10px;
+  border: none;
+  width: 97%;
+  outline: none;
+  font-family: cursive;
+}

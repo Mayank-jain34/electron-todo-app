@@ -1,16 +1,13 @@
 import React from 'react';
 const Link = ({ active, children, onClick }) => {
-  if (active) {
-    return <span>{children}</span>
-  }
   return (
-    <a href="#"
+    <button className={active ? 'active' : null}
        onClick={e => {
          e.preventDefault()
          onClick()
        }}>
       {children}
-    </a>
+    </button>
   )
 }
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleTodo, deleteTodo, updateFormState } from '../actions/toDoActions'
+import { toggleTodo, deleteTodo, updateTodo } from '../actions/toDoActions'
 import TodoList from '../components/TodoList'
 
 const getVisibleTodos = (todos, filter)=>{
@@ -27,8 +27,8 @@ const mapDispatchToProps = (dispatch) => {
     deleteTodo: (id) => {
       dispatch(deleteTodo(id));
     },
-    updateTodo: (id) => {
-      dispatch(updateFormState(true, id));
+    updateTodo : function (id, taskName) {
+      dispatch(updateTodo(id, taskName));
     }
   }
 }

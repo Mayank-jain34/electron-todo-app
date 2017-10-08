@@ -2,17 +2,19 @@ import React from 'react';
 import Todo from './Todo';
 
 const TodoList = ({ todos, toggleTodo, deleteTodo, updateTodo })=>(
-  <ul className="list-group">
+  <div className="todo-list-container">
+  <table>
     {
       todos.map(todo =>
         <Todo key={todo.id} {...todo }
           toggleTodo = {() => toggleTodo(todo.id)}
           deleteTodo = {() => deleteTodo(todo.id)}
-          updateTodo = {() => updateTodo(todo.id)}
+          updateTodo = {(todoText) => updateTodo(todo.id, todoText)}
         />
       )
     }
-  </ul>
+    </table>
+  </div>
 )
 
 export default TodoList

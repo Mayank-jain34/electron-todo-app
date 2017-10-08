@@ -4,7 +4,6 @@ const todos = (state = [], action)=>{
       let todo = {
         id: action.id,
         taskName: action.taskName,
-        dateOfCompletion: action.dateOfCompletion,
         completed: false
       };
       return [
@@ -27,7 +26,6 @@ const todos = (state = [], action)=>{
         }
         return Object.assign({}, todo, {
           taskName : action.taskName,
-          dateOfCompletion : action.dateOfCompletion
         })
       });
     case 'DELETE_TODO':
